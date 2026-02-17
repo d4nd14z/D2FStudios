@@ -1,0 +1,74 @@
+<div class="relative min-h-screen w-full flex items-center justify-center py-12 px-4 sm:px-6 lg:px-8 bg-cover bg-center bg-no-repeat"
+     style="background-image: url('https://images.pexels.com/photos/6028170/pexels-photo-6028170.jpeg');">
+  
+  <div class="absolute inset-0 bg-slate-900/50 backdrop-brightness-75"></div>
+
+  <div class="relative z-10 w-full max-w-md space-y-8">
+    
+    <div class="text-center">
+      <h2 class="text-3xl font-extrabold text-white tracking-tight drop-shadow-md">
+        Bienvenido
+      </h2>
+      <p class="mt-2 text-sm text-slate-200">
+        Ingresa tus credenciales para continuar
+      </p>
+    </div>
+
+    <div class="bg-white/20 backdrop-blur-xl p-8 rounded-3xl shadow-2xl border border-white/30">
+      
+      <form (submit)="$event.preventDefault(); onLogin()" class="space-y-6" autocomplete="off">
+        
+        <div>
+          <label class="block text-sm font-semibold text-white ml-1">Usuario</label>
+          <div class="mt-1">
+            <input type="text" 
+                   [(ngModel)]="username" 
+                   name="field_x123" 
+                   required
+                   placeholder="Tu usuario"
+                   class="block w-full px-4 py-3 rounded-xl bg-white/10 border border-white/20 text-white placeholder-slate-300 focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:bg-white/20 transition-all sm:text-sm"
+                   autocomplete="off">
+          </div>
+        </div>
+
+        <div>
+          <label class="block text-sm font-semibold text-white ml-1">Contraseña</label>
+          <div class="mt-1">
+            <input type="password" 
+                   [(ngModel)]="password" 
+                   name="field_y456" 
+                   required
+                   placeholder="••••••••"
+                   class="block w-full px-4 py-3 rounded-xl bg-white/10 border border-white/20 text-white placeholder-slate-300 focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:bg-white/20 transition-all sm:text-sm"
+                   autocomplete="new-password">
+          </div>
+        </div>
+
+        <div class="flex items-center justify-between px-1">
+          <div class="flex items-center">
+            <input id="remember-me" 
+                   type="checkbox" 
+                   [(ngModel)]="rememberMe" 
+                   name="rememberMe"
+                   class="h-4 w-4 rounded border-white/30 text-indigo-600 focus:ring-indigo-500 bg-white/10">
+            <label for="remember-me" class="ml-3 block text-sm text-white cursor-pointer select-none">
+              Recordarme por 72h
+            </label>
+          </div>
+        </div>
+
+        <div>
+          <button type="submit" 
+                  class="group relative w-full flex justify-center py-3 px-4 border border-transparent text-sm font-bold rounded-xl text-white bg-indigo-600 hover:bg-indigo-500 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500 transition-all active:scale-95 shadow-lg">
+            INICIAR SESIÓN
+          </button>
+        </div>
+
+      </form>
+    </div>
+
+    <p class="text-center text-xs text-slate-300">
+      &copy; 2026 Tu Sistema - Todos los derechos reservados.
+    </p>
+  </div>
+</div>

@@ -1,0 +1,20 @@
+.admin-container {
+  padding: 2rem;
+  font-family: sans-serif;
+}
+
+.btn-logout {
+  background-color: #e11d48; /* Un rojo potente */
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 8px;
+  cursor: pointer;
+  font-weight: bold;
+  margin-top: 20px;
+  transition: background 0.3s;
+}
+
+.btn-logout:hover {
+  background-color: #be123c;
+}
